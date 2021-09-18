@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class PizzaStore{
++orderPizza(String pizzaType)
+{abstract} createPizza()
+}
+abstract class Pizza{
++prepare()
++bake()
++cut()
++box()
+}
+
+class NewYorkPizzaStore{
++createPizza(String type)
+}
+
+class ChicagoPizzaStore{
++createPizza(String type)
+}
+
+class NewYorkStyleCheese{}
+class NewYorkStyleSausage{}
+class NewYorkStylePepperoni{}
+class ChicagoStyleCheese{}
+class ChicagoStyleSausage{}
+class ChicagoStylePepperoni{}
+
+PizzaStore -> Pizza
+
+PizzaStore <|-- NewYorkPizzaStore
+PizzaStore <|-- ChicagoPizzaStore
+Pizza <|-- NewYorkStyleSausage
+Pizza <|-- NewYorkStyleCheese
+Pizza <|-- NewYorkStylePepperoni
+Pizza <|-- ChicagoStylePepperoni
+Pizza <|-- ChicagoStyleCheese
+Pizza <|-- ChicagoStyleSausage
+
+@enduml
