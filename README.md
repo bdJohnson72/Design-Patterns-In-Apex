@@ -6,8 +6,15 @@ my previous Repo and its organization. This is an attempt of my part to give bac
 implementations of all the class Gang of Four patterns in Apex. I grant you that my implementations will often be trivial 
 and contrived. But I hope that helps make the underlying ideas easy to understand. 
 
-##The Factory Pattern
-I have tried to provide three examples of the factory pattern in Apex. 
+## Creational Patterns
+Design patterns that are concerned with the creation of objects 
+
+#### The Simple Factory Pattern
+- One of my every day go to patterns. Code is based on Head First Design Patterns
+### The Reflective Factory
+This can be a bit more involved but is also the ultimate in closed for modification but open for extension. 
+By making our factory reflective we never need to update it when we add new concrete types.
+- Unique to Apex and Salesforce. Refactor the simple factory pattern with custom metadata
 
 
 ## Read All About It

@@ -6,7 +6,7 @@
  * But a concrete pizza class on the left
 */
 
-public with sharing class SimplePizzaFactory {
+public with sharing class ReflectivePizzaFactory {
 
     public Pizza createPizza(String typeOfPizza){
         Pizza pizza = null;

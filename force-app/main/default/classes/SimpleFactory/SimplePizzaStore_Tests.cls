@@ -7,7 +7,7 @@ private class SimplePizzaStore_Tests {
     @IsTest
     static void itShouldMakeAPizza() {
         //given
-        SimplePizzaStore store = new SimplePizzaStore(new SimplePizzaFactory());
+        SimplePizzaStore store = new SimplePizzaStore(new ReflectivePizzaFactory());
         //when
         Test.startTest();
         Pizza pizza = store.orderPizza('cheese');

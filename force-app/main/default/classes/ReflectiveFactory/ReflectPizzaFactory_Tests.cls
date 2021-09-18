@@ -1,6 +1,6 @@
 
 @IsTest
-private class SimplePizzaFactory_Tests {
+private class ReflectPizzaFactory_Tests {
     @IsTest
     static void itShouldReturnCheesePizza() {
         //given
@@ -38,5 +38,5 @@ private class SimplePizzaFactory_Tests {
         Test.stopTest();
         //then
         System.assert(pizza instanceof PepperoniPizza);
-	}
+    }
 }
