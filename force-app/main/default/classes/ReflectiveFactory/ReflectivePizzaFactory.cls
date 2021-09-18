@@ -6,6 +6,7 @@
 
 
 public with sharing class ReflectivePizzaFactory {
+    //test
     public Pizza createPizza(String typeOfPizza){
         Pizza__mdt pizza = Pizza__mdt.getInstance(typeOfPizza);
         Type t = Type.forName(pizza.Class_To_Instantiate__c);

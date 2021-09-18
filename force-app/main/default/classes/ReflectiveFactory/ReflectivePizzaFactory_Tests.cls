@@ -1,9 +1,9 @@
 
 @IsTest
-private class ReflectPizzaFactory_Tests {
+private class ReflectivePizzaFactory_Tests {
     @IsTest
     static void itShouldReturnCheesePizza() {
-        //given
+
         ReflectivePizzaFactory factory = new ReflectivePizzaFactory();
         Pizza pizza;
         //when

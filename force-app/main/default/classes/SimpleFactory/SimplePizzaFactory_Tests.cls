@@ -4,7 +4,7 @@ private class SimplePizzaFactory_Tests {
     @IsTest
     static void itShouldReturnCheesePizza() {
         //given
-        ReflectivePizzaFactory factory = new ReflectivePizzaFactory();
+        SimplePizzaFactory factory = new SimplePizzaFactory();
         Pizza pizza;
         //when
         Test.startTest();
@@ -17,7 +17,7 @@ private class SimplePizzaFactory_Tests {
     @IsTest
     static void itShouldReturnTacoPizza(){
         //given
-        ReflectivePizzaFactory factory = new ReflectivePizzaFactory();
+        SimplePizzaFactory factory = new SimplePizzaFactory();
         Pizza pizza;
         //when
         Test.startTest();
@@ -30,7 +30,7 @@ private class SimplePizzaFactory_Tests {
     @IsTest
     static void itShouldReturnPepperoniPizza(){
         //given
-        ReflectivePizzaFactory factory = new ReflectivePizzaFactory();
+        SimplePizzaFactory factory = new SimplePizzaFactory();
         Pizza pizza;
         //when
         Test.startTest();

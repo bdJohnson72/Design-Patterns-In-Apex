@@ -6,15 +6,15 @@
  * But a concrete pizza class on the left
 */
 
-public with sharing class ReflectivePizzaFactory {
+public with sharing class SimplePizzaFactory {
 
-    public Pizza createPizza(String typeOfPizza){
+    public Pizza createPizza(String typeOfPizza) {
         Pizza pizza = null;
-        switch on typeOfPizza.toLowerCase(){
+        switch on typeOfPizza.toLowerCase() {
             when 'cheese' {
                 pizza = new CheesePizza();
             }
-            when 'taco'{
+            when 'taco' {
                 pizza = new TacoPizza();
             }when 'pepperoni' {
                 pizza = new PepperoniPizza();
