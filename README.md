@@ -1,5 +1,6 @@
 
 # Design Patterns In The Apex Programming Language
+[![CI Workflow](https://github.com/bdjohnson72/Design-Patterns-In-apex/workflows/CI/badge.svg)
 ![recipes-logo](recipes-logo.png)
 
 Few things have helped me more in my career than understanding how you use the Object Oriented Features of Apex to write
