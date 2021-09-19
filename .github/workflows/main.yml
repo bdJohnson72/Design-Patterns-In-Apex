@@ -47,18 +47,20 @@ jobs:
         shell: bash
         run: 'echo ${{ secrets.SFDX_AUTH_URL}} > SFDX_QA'
         
-      - name: 'Authenticate against dev hub'
+      - name: 'Authenticate Dev Hub'
         run: node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -f SFDX_QA -s -a LRQA
+        
+      - name: 'Create Scratch Org'
+        run: sfdx force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1
+        
+      - name: 'Push source to scratch org'
+        run: sfdx force:source:push 
         
       - name: Run Apex test
         run: 
-         node_modules/sfdx-cli/bin/run force:apex:test:run --resultformat tap --codecoverage -c -r human
+         node_modules/sfdx-cli/bin/run force:apex:test:run --resultformat tap --codecoverage -c -r human -w 20
          
-      - name: Deploy source
-        id: Deploy
-        if: github.event_name == 'push'
-        run:
-         node_modules/sfdx-cli/bin/run force:source:deploy -p /force-app -u LRQA --json --loglevel fatal
+      
         
           
 
