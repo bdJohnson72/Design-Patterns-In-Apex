@@ -51,10 +51,10 @@ jobs:
         run: node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -f SFDX_QA -s -a LRQA
         
       - name: 'Create Scratch Org'
-        run: sfdx force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1
+        run: node_modules/sfdx-cli/bin/run force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1
         
       - name: 'Push source to scratch org'
-        run: sfdx force:source:push 
+        run: node_modules/sfdx-cli/bin/run force:source:push 
         
       - name: Run Apex test
         run: 
