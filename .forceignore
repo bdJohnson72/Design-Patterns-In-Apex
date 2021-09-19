@@ -13,3 +13,4 @@ package.xml
 **/__tests__/**
 
 **profiles
+force-app/main/default/profile
