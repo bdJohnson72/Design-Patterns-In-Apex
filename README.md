@@ -1,4 +1,9 @@
+
 # Design Patterns In The Apex Programming Language
+![CI Workflow](https://github.com/bdJohnson72/Design-Patterns-In-Apex/actions/workflows/main.yml/badge.svg)
+
+
+![recipes-logo](recipes-logo.png)
 
 Few things have helped me more in my career than understanding how you use the Object Oriented Features of Apex to write
 code that is flexible, testable and maintainable. I have done quite a few YouTube videos on this topic and have a lot
@@ -8,6 +13,7 @@ implementations will often be trivial and contrived. But I hope that helps make 
 
 If I have also published a video about the pattern I have added a link to in the heading.
 
+## Table of Contents 
 ## Creational Patterns
 
 Design patterns that are concerned with the creation of objects

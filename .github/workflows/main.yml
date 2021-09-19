@@ -1,0 +1,67 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Design Patterns In Apex CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:    
+    branches: [ master ]
+    paths-ignore:
+            - 'sfdx-project.json'
+            - 'README.md'
+    
+  pull_request:
+    branches: [ master ]
+    paths-ignore:
+            - 'sfdx-project.json'
+            - 'README.md'
+    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:  
+    runs-on: ubuntu-latest   
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+        if: github.event.action == 'opened' || github.event.action == 'synchronize' || github.event_name == 'push'
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '>=14'
+          check-latest: true
+          
+      - name: Install Salesforce CLI
+        run: |
+          npm install sfdx-cli
+          node_modules/sfdx-cli/bin/run --version
+          node_modules/sfdx-cli/bin/run plugins --core
+          
+      - name: 'Populate auth file with SFDX_URL secret'
+        shell: bash
+        run: 'echo ${{ secrets.SFDX_AUTH_URL}} > SFDX_QA'
+        
+      - name: 'Authenticate Dev Hub'
+        run: node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -f SFDX_QA -s -a devhub -d
+        
+      - name: 'Create Scratch Org'
+        run: node_modules/sfdx-cli/bin/run force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1
+        
+      - name: 'Push source to scratch org'
+        run: node_modules/sfdx-cli/bin/run force:source:push 
+        
+      - name: Run Apex test
+        run: 
+         node_modules/sfdx-cli/bin/run force:apex:test:run --resultformat tap --codecoverage -c -r human -w 20
+         
+      
+        
+          
+
+     
