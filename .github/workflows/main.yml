@@ -58,7 +58,7 @@ jobs:
         id: Deploy
         if: github.event_name == 'push'
         run:
-         node_modules/sfdx-cli/bin/run force:source:deploy -p diffdeploy/force-app -u LRQA --json --loglevel fatal
+         node_modules/sfdx-cli/bin/run force:source:deploy -p /force-app -u LRQA --json --loglevel fatal
         
           
 
