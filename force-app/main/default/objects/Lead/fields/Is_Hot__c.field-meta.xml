@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Hot__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used as an example in the Singleton Pattern</description>
+    <externalId>false</externalId>
+    <label>Is Hot</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>
