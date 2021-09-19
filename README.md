@@ -40,6 +40,11 @@ our factory reflective we never need to update it when we add new concrete types
 Another implementation using the pizza example from Head First Design Patterns. What do we do if we want our Pizza Store
 to access different factories?
 
+#### [The Singleton](https://github.com/bdJohnson72/Design-Patterns-In-Apex/tree/master/force-app/main/default/classes/singleton)
+-[Watch on YouTube](https://www.youtube.com/watch?v=f4n0oyYcvtw)
+
+An easy pattern to understand  and always useful for keeping your governer limits under control 
+
 ## Read All About It
 
 Nothing in this repo would be possible without the books below. And most of the implementations will be based on ones
