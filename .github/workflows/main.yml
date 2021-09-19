@@ -48,7 +48,7 @@ jobs:
         run: 'echo ${{ secrets.SFDX_AUTH_URL}} > SFDX_QA'
         
       - name: 'Authenticate Dev Hub'
-        run: node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -f SFDX_QA -s -a LRQA
+        run: node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -f SFDX_QA -s -a devhub -d
         
       - name: 'Create Scratch Org'
         run: node_modules/sfdx-cli/bin/run force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1
