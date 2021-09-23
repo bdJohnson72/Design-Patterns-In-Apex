@@ -21,7 +21,7 @@ Design patterns that are concerned with the creation of objects
 #### [The Simple Factory Pattern](https://github.com/bdJohnson72/Design-Patterns-In-Apex/tree/master/force-app/main/default/classes/SimpleFactory)
 
 - One of my every day go to patterns. Code is based on Head First Design Patterns
-- [UML diagram](https://github.com/bdJohnson72/Design-Patterns-In-Apex/blob/master/UML/Simple%20Factory.png)
+- [UML diagram](https://github.com/bdJohnson72/Design-Patterns-In-Apex/blob/master/UML/simple%20factory/Simple%20Factory.png)
 
 #### [The Reflective Factory](https://github.com/bdJohnson72/Design-Patterns-In-Apex/tree/master/force-app/main/default/classes/ReflectiveFactory)
 
