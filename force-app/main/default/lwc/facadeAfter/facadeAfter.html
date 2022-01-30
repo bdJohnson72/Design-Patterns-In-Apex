@@ -1,0 +1,49 @@
+<!--
+ - Created by bjohnson on 1/26/2022.
+ -->
+
+<!-- Facade After -->
+<!--
+ - Created by bjohnson on 1/26/2022.
+ -->
+
+<!-- Facade After -->
+<template>
+  <lightning-card class="slds-m-around_small" >
+    <form class="slds-m-around_small">
+      <lightning-input type="text"
+                       label="product"
+                       onblur={updateProductName}
+                       required>
+      </lightning-input>
+      <lightning-input type="number"
+                       label="Count"
+                       onblur={updateProductCount}
+                       required>
+      </lightning-input>
+      <lightning-input type="number"
+                       label="Zip Code"
+                       onblur={updateAddress}
+                       required>
+      </lightning-input>
+      <lightning-input type="number"
+                       label="Card Number"
+                       onblur={updatePayment}
+                       required>
+      </lightning-input>
+      <lightning-input type="number"
+                       label="Discount"
+                       step=".01"
+                       onblur={updateDiscount}
+                       required>
+      </lightning-input>
+      <div class="slds-m-around_small">
+        <lightning-button variant="success"
+                          label="Place Order"
+                          title="Place Order"
+                          onclick={submit}>
+        </lightning-button>
+      </div>
+    </form>
+  </lightning-card>
+</template>
