@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+Component --> Client
+
+@startuml
+Class Client {}
+class Component {
++Operation()
++Add( Component )
++Remove( Component )
++GetChild( index:int)
+}
+
+Client --> Component
+@enduml
+
+
+
+@enduml
