@@ -3,8 +3,8 @@
     <fullName>Product_Catelog__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Product Catelog</label>
-    <referenceTo>Product_Catelog__c</referenceTo>
+    <label>Product Catalog</label>
+    <referenceTo>Product_Catalog__c</referenceTo>
     <relationshipLabel>Product Notifications</relationshipLabel>
     <relationshipName>Product_Notifications</relationshipName>
     <required>false</required>
