@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class Client{}
+class Context{}
+abstract class Expression{
+interpret(Context)
+}
+class TerminalExpressions{}
+class NonTerminalExpression{}
+
+Client -> Context
+Client -> Expression
+Expression <|-- TerminalExpressions
+Expression <|-- NonTerminalExpression
+@enduml

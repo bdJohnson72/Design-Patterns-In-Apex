@@ -1,0 +1,31 @@
+<!--
+ - Created by Brooks Johnson on 3/12/2022.
+ -->
+
+<!-- Product Subscribe -->
+<template>
+  <template if:true={product}>
+    <lightning-card title="Product Catalog">
+      <div class="slds-m-around_small">
+        <p>
+          <span class="slds-text-title_bold">{product.Product_Name__c}</span> is
+          not available yet
+        </p>
+        <p class="slds-m-bottom_small">
+          Would you like to be notified when it is available
+        </p>
+        <lightning-input
+                label="email"
+                type="email"
+                class="'email slds-m-bottom_small"
+        ></lightning-input>
+        <lightning-button
+                label="Update Me"
+                variant="success"
+                onclick={subscribeUser}
+        >
+        </lightning-button>
+      </div>
+    </lightning-card>
+  </template>
+</template>

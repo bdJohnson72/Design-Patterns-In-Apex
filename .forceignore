@@ -14,3 +14,4 @@ package.xml
 
 **profiles
 force-app/main/default/profile
+force-app/main/default/profiles
