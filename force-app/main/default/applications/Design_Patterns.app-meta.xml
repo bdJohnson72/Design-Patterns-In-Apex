@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#37B407</headerColor>
+        <logo>codey</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Design Patterns</label>
+    <navType>Standard</navType>
+    <tabs>Observer_Pattern</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Design_Patterns_UtilityBar</utilityBar>
+</CustomApplication>

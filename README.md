@@ -41,9 +41,19 @@ Another implementation using the pizza example from Head First Design Patterns. 
 to access different factories?
 
 #### [The Singleton](https://github.com/bdJohnson72/Design-Patterns-In-Apex/tree/master/force-app/main/default/classes/singleton)
+
 -[Watch on YouTube](https://www.youtube.com/watch?v=f4n0oyYcvtw)
 
-An easy pattern to understand  and always useful for keeping your governer limits under control 
+An easy pattern to understand and always useful for keeping your governer limits under control
+
+## Behavioral Design Patterns
+
+These patterns are all about the communication between objects. How can objects cooperate to perform tasks.
+
+### The Observer
+
+When one object changes state we want to notify all the depenents. But we want to publisher and subscribers to be
+loosely coupled.
 
 ## Read All About It
 
