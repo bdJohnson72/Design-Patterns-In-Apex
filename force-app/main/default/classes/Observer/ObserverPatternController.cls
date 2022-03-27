@@ -16,8 +16,8 @@ public with sharing class ObserverPatternController {
 
   @AuraEnabled
   public static void subscribeUser(String productId, String email) {
-    Product_Notification__c notification = new Product_Notification__c(Email_Address__c = email);
+    Product_Notification__c observer = new Product_Notification__c(Email_Address__c = email);
     ISubject productSubject = new ProductSubject(productId);
-    productSubject.subscribe(notification);
+    productSubject.subscribe(observer);
   }
 }

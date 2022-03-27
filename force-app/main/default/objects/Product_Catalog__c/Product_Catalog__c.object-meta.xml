@@ -154,13 +154,13 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>Product Catelog</label>
+    <label>Product Catalog</label>
     <nameField>
         <displayFormat>PC-{000000}</displayFormat>
         <label>Product Catelog Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Product Catelogs</pluralLabel>
+    <pluralLabel>Product Catalogs</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
