@@ -50,7 +50,8 @@ An easy pattern to understand and always useful for keeping your governer limits
 
 These patterns are all about the communication between objects. How can objects cooperate to perform tasks.
 
-### The Observer
+### [The Observer](https://github.com/bdJohnson72/Design-Patterns-In-Apex/tree/master/force-app/main/default/classes/Observer)
+-[Watch on YouTube](https://www.youtube.com/watch?v=w-yKRDCuDPI)
 
 When one object changes state we want to notify all the depenents. But we want to publisher and subscribers to be
 loosely coupled.
