@@ -56,6 +56,13 @@ These patterns are all about the communication between objects. How can objects 
 When one object changes state we want to notify all the depenents. But we want to publisher and subscribers to be
 loosely coupled.
 
+##Refactoring
+I have begun to add some of the examples from [Martin Fowler's Refactoring](amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature/dp/0134757599/ref=sr_1_1?keywords=refactoring&qid=1655299896&s=books&sprefix=refacto%2Cstripbooks%2C68&sr=1-1)
+and [Joshua Kerievsky's Refactoring to Patterns](amazon.com/Refactoring-Patterns-Joshua-Kerievsky/dp/0321213351)
+
+- [Composing Methods](github.com/bdJohnson72/Design-Patterns-In-Apex/tree/master/force-app/main/default/classes/Refactoring/composing_methods)
+- [Simplifying Conditionals](github.com/bdJohnson72/Design-Patterns-In-Apex/tree/master/force-app/main/default/classes/Refactoring/simplify_%20conditionals)
+
 ## Read All About It
 
 Nothing in this repo would be possible without the books below. And most of the implementations will be based on ones
