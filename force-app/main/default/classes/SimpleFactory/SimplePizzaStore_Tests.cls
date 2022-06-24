@@ -15,4 +15,13 @@ private class SimplePizzaStore_Tests {
         //then
         System.assert(pizza instanceof CheesePizza, 'It should make a cheese pizza');
     }
+    @IsTest
+    static void isShouldMakeAPizzaWithSimpleFactory(){
+        //given
+        SimplePizzaStore store = new SimplePizzaStore(new SimplePizzaFactory());
+        //when
+        Pizza pizza = store.orderPizza('pepperoni');
+        //then
+        System.assert(pizza instanceof PepperoniPizza);
+    }
 }

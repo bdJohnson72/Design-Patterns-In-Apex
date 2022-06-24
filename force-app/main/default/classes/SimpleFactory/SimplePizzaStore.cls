@@ -1,13 +1,13 @@
 
 public with sharing class SimplePizzaStore {
 
-    ReflectivePizzaFactory factory;
+    IPizzaFactory factory;
 
     /**
      * @description We can pass the appropriate factory in to the constructor at run time
      * @param factory The Factory class we want to use at run time
      */
-    public SimplePizzaStore(ReflectivePizzaFactory factory){
+    public SimplePizzaStore(IPizzaFactory factory){
         this.factory = factory;
     }
     /**

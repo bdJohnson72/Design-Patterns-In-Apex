@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+PizzaStore --> NewYorkStyleCheese
+PizzaStore --> NewYorkStyleSausage
+PizzaStore --> NewYorkStylePepperoni
+PizzaStore  --> ChicagoStyleCheese
+PizzaStore --> ChicagoStyleSausage
+PizzaStore --> ChicagoStylePepperoni
+
+class PizzaStore
+
+@enduml
