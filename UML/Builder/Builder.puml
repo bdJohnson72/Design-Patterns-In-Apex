@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Director o-->Builder
+Builder <|--  ConcreteBuilder
+ConcreteBuilder --> Product
+
+class Product
+
+class ConcreteBuilder{
+buildPart()
+getResult()
+}
+
+Interface Builder{
+buildPart()
+}
+
+class Director{
+Construct()
+}
+
+@enduml
