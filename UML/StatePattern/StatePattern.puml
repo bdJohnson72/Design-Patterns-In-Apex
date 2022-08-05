@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+Context *--> State
+State <|-- State1
+State <|-- State2
+State <|-- State3
+
+
+Interface State{
++ doAction()
+}
+class Context{
+-state state
+}
+class State1{
++ doAction()
+}
+class State2{
++ doAction()
+}
+class State3{
++ doAction()
+}
+@enduml
