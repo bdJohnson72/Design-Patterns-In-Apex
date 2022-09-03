@@ -17,10 +17,14 @@ public with sharing class PaymentController2 {
     }
 
     public static void submitPayment(PaymentDetails paymentDetails) {
+        //Over load this method and forward the payment processing to the service layer
         PaymentService paymentService = new PaymentService(paymentDetails);
         paymentService.processOrder();
     }
 
+    /**
+     * A wrapper class for our PaymentDetails this does not have to be an inner class.
+     */
     public class PaymentDetails {
         public String emailAddress { get; private set; }
         public String cardType { get; private set; }

@@ -19,4 +19,6 @@ public with sharing class Visa extends CreditCard {
         System.debug('processing payment for ' + this.details.amount);
         //if something went wrong with the payment. It was rejected we can throw a credit card exception.
     }
+
+
 }

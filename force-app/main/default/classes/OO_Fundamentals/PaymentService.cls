@@ -10,6 +10,7 @@ public with sharing class PaymentService {
     //We can add more cards classes as needed
 
     //Use of composition a payment service has a credit card...
+    //This is different than inheritance. A visa  card is a credit card
     CreditCard card;
 
     public PaymentService(PaymentController2.PaymentDetails paymentDetails) {
