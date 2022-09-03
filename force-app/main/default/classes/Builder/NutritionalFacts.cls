@@ -7,22 +7,22 @@
 
 public with sharing class NutritionalFacts {
 
-    private final Integer servingSize;
-    private final Integer servings;
-    private final Integer calories;
-    private final Integer fat;
-    private final Integer sodium;
-    private final Integer carbohydrate;
+    private Integer servingSize;
+    private Integer servings;
+    private Integer calories;
+    private Integer fat;
+    private Integer sodium;
+    private Integer carbohydrate;
 
-    public NutritionalFacts(Integer servingSize, Integer servings){
+    public NutritionalFacts(Integer servingSize, Integer servings) {
         this(servingSize, servings, 0);
     }
 
-    public NutritionalFacts(Integer servingSize, Integer servings, Integer calories){
-        this(servingSize,servings, calories, 0);
+    public NutritionalFacts(Integer servingSize, Integer servings, Integer calories) {
+        this(servingSize, servings, calories, 0);
     }
 
-    public NutritionalFacts(Integer servingSize, Integer servings, Integer calories, Integer fat){
+    public NutritionalFacts(Integer servingSize, Integer servings, Integer calories, Integer fat) {
        this(servingSize, servings, calories, fat, 0);
     }
 
@@ -30,7 +30,7 @@ public with sharing class NutritionalFacts {
         this(servingSize, servings, calories, fat, sodium, 0);
     }
 
-    public NutritionalFacts(Integer servingSize, Integer servings, Integer calories, Integer fat, Integer sodium, Integer carbohydrate){
+    public NutritionalFacts(Integer servingSize, Integer servings, Integer calories, Integer fat, Integer sodium, Integer carbohydrate) {
         this.servingSize = servingSize;
         this.servings = servings;
         this.calories = calories;
@@ -38,10 +38,15 @@ public with sharing class NutritionalFacts {
         this.sodium = sodium;
         this.carbohydrate = carbohydrate;
     }
+    /*
+    consider the use of static constructor methods instead. You can have as many as you want per class and
+    The name of the the method will reveal your intent.
+    */
+    public static NutritionalFacts taco() {
+        return new NutritionalFacts(4, 1, 300, 10, 20);
+    }
 
-
-
-
-
-
+    public static NutritionalFacts cheeseBurger() {
+        return new NutritionalFacts(16, 1, 600, 20, 10, 20);
+    }
 }
