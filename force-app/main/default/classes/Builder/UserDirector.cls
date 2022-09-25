@@ -5,11 +5,9 @@
 public with sharing class UserDirector {
     IUserBuilder userBuilder;
 
-    public UserDirector(IUserBuilder userBuilder){
-        this.userBuilder = userBuilder;
-    }
 
-    public User build() {
+    public User build(IUserBuilder userBuilder) {
+        this.userBuilder = userBuilder;
         userBuilder.setFirstName();
         userBuilder.setLastName();
         userBuilder.setUsername();
