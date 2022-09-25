@@ -12,6 +12,7 @@ public with sharing class UserDirector {
     public User build() {
         userBuilder.setFirstName();
         userBuilder.setLastName();
+        userBuilder.setUsername();
         userBuilder.setEmail();
         userBuilder.setAlias();
         userBuilder.setEmailEncodingKey();

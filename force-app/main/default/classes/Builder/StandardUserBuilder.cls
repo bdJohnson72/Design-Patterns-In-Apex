@@ -1,11 +1,11 @@
 /**
- * Created by brooks.johnson on 9/23/2022.
+ * Created by Brooks Johnson on 9/25/2022.
  */
 
-public with sharing class AdminUserBuilder implements IUserBuilder {
-    public User user {get; private set; }
+public with sharing class StandardUserBuilder implements IUserBuilder {
+    public User user { get; private set; }
 
-    public AdminUserBuilder() {
+    public StandardUserBuilder() {
         this.user = new User();
     }
 
@@ -15,7 +15,7 @@ public with sharing class AdminUserBuilder implements IUserBuilder {
     }
 
     public void setLastName() {
-        user.LastName = 'Admin';
+        user.LastName = 'Standard User';
     }
 
     public void setEmail() {
@@ -23,11 +23,11 @@ public with sharing class AdminUserBuilder implements IUserBuilder {
     }
 
     public void setUsername() {
-        user.Username = 'testAdminUser@' + String.valueOf(Crypto.getRandomInteger()) + '.com';
+        user.Username = 'testStandardUser@' + String.valueOf(Crypto.getRandomInteger()) + '.com';
     }
 
     public void setProfile() {
-        Profile profile = [SELECT Id FROM Profile WHERE Name = 'System Administrator' LIMIT 1];
+        Profile profile = [SELECT Id, Name FROM Profile WHERE Name = 'Standard User'];
         user.ProfileId = profile.Id;
     }
 
@@ -36,7 +36,7 @@ public with sharing class AdminUserBuilder implements IUserBuilder {
     }
 
     public void setAlias() {
-        user.Alias = 'Admin';
+        user.Alias = 'standard';
     }
 
     public void setLanguageKey() {
