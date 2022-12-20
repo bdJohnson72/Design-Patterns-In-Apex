@@ -1,0 +1,6 @@
+<!--
+ - Created by brooks.johnson on 12/20/2022.
+ -->
+
+<aura:interface description="Pay">
+</aura:interface>
