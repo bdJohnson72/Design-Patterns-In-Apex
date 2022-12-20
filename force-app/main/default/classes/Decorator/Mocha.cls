@@ -10,8 +10,8 @@ public with sharing class Mocha extends CondimentDecorator {
         this.beverage = beverage;
     }
 
-    public override String getDescription(){
-        return beverage.description = ' Mocha';
+    public  override String getDescription(){
+        return beverage.getDescription() +  ' Mocha';
     }
 
     public override Double cost(){

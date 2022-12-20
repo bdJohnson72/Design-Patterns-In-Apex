@@ -8,6 +8,8 @@ public abstract class Beverage {
 
     public abstract Double cost();
 
-
+    public virtual String getDescription(){
+        return this.description;
+    }
 
 }

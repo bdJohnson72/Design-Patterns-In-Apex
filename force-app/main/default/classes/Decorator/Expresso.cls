@@ -5,7 +5,7 @@
 public with sharing class Expresso extends Beverage {
 
     public Expresso() {
-        this.description = 'Expresso';
+        this.description = 'Espresso';
     }
 
 
