@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+PaymentForYouProccessor <.. PaymentAdapter
+
+
+PaymentAdapter <.. InvoicePaymentService
+PaymentAdapter <.. RecurringBillingService
+PaymentAdapter <.. QuotePaymentService
+note "Still a lot of coupling but better " as N1
+
+class PaymentForYouProccessor{
+    +submitRequest()
+}
+
+class InvoicePaymentService{
++submitRequest()
+}
+
+class QuotePaymentService{
+    +submitRequest()
+}
+
+class RecurringBillingService{
+    +submitRequest()
+}
+
+class PaymentAdapter{
+    -PaymentForYouProccessor
+    +submitRequest();
+}
+
+@enduml

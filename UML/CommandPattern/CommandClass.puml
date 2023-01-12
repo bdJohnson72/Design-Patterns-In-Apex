@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Invoker{
+
+}
+
+interface Command(){
+    + execute()
+}
+
+
+
+@enduml

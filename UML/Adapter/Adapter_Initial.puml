@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+PaymentForYouProccessor <.. InvoicePaymentService
+PaymentForYouProccessor <.. QuotePaymentService
+PaymentForYouProccessor <.. RecurringBillingService
+note "Everything is tightly coupled" as N1
+
+class PaymentForYouProccessor{
+    +submitRequest()
+}
+
+class InvoicePaymentService{
++submitRequest()
+}
+
+class QuotePaymentService{
+    +submitRequest()
+}
+
+class RecurringBillingService{
+    +submitRequest()
+}
+
+@enduml
