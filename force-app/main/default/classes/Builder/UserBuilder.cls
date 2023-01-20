@@ -3,7 +3,6 @@
  */
 
 public with sharing class UserBuilder {
-
     public with sharing class Admin implements IUserBuilder {
         public User user { get; private set; }
 
