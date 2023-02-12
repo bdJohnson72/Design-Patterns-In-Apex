@@ -4,10 +4,8 @@
 
 public with sharing class VendorXMLPaymentApp {
 
-    public void processPayment(String paymentRequest) {
-
-        // Code here to generate XML;
-        System.debug('Calling the VendorXMLPaymentApp.processPayment with XML data');
+    public void processPaymentXML(String paymentRequest) {
+        System.debug('Calling the Vendor XML App to process payment');
     }
 
 }
